@@ -1,15 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 class CoordinatesButton extends React.Component {
   handleClick = event => {
-    return null;
+    this.props.onReceiveCoordinates( [event.clientX, event.clientY] );
   };
 
-
   render() {
-    return <div>
-      <h1>Just want learn to work.</h1>
-    </div>
+    return <button onClick= {this.handleClick}>Coords</button>;
   }
 }
 
