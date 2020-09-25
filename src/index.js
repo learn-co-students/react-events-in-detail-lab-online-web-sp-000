@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import CoordinatesButton from './components/CoordinatesButton';
 import DelayedButton from './components/DelayedButton';
 
+//buttons being passed as props
 ReactDOM.render(
   <div>
     <CoordinatesButton onReceiveCoordinates={ mouseCoordinates => console.log(mouseCoordinates) } />
