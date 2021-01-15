@@ -3,12 +3,14 @@ import React, { Component } from 'react'
 
 export default class DelayedButton extends Component {
     
-    onDelayedClick = () => {
-        // setTimeOut(() => { console.log("delayed much")}, 1000)
-        console.log('p')
+    callback = (event) => {
+        event.persist();
+        setTimeout(() => {this.props.onDelayedClick(event)}, this.props.delay)
+        
+        // this.props.onDelayedClick(event)
     }
 
     render () {
-        return <button onClick={this.onDelayedClick}></button>
+        return <button onClick={this.callback}>Delayeddd</button>
     }
 }
