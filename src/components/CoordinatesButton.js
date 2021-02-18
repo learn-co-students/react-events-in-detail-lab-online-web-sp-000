@@ -2,16 +2,17 @@
 import React, {Component} from 'react';
 
 class CoordinatesButton extends Component {
-    
 
-    handleOnClick = (event) => {
-        console.log(event)
-        return this.onReceiveCoordinates = [event.clientX, event.clientY];
+    handleClick = (event) => {
         
+        this.props.onReceiveCoordinates([event.clientX, event.clientY])
+        // onReceiveCoordinates.preventDefault()
+        // let args = (onReceiveCoordinates.clientX, onReceiveCoordinates.clientY);
+        // console.log(args)
     }
     
     render(){
-        return <button onClick = {this.handleOnClick} ></button>
+        return <button onClick = {this.handleClick} ></button>
     }
 }
 
