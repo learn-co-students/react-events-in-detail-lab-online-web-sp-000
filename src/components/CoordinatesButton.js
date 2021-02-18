@@ -4,9 +4,10 @@ import React, {Component} from 'react';
 class CoordinatesButton extends Component {
     
 
-    handleOnClick = () => {
-        let arr = onReceiveCoordinates();
-        return arr;
+    handleOnClick = (event) => {
+        console.log(event)
+        return this.onReceiveCoordinates = [event.clientX, event.clientY];
+        
     }
     
     render(){
