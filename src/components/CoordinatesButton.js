@@ -7,7 +7,6 @@ export default class CoordinatesButton extends Component {
 
   handleClick = (e) => {
     this.props.onReceiveCoordinates([e.clientX, e.clientY])
-    return [e.clientX, e.clientY]
   }
 
   render() {
